@@ -8,3 +8,6 @@ activations/
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+
+# internal working notes (quotes reference docs; not for publication)
+log.md
