@@ -1,0 +1,10 @@
+# Reference material that is not mine to redistribute (Neel's docs, the paper)
+context/
+context_text/
+
+# Large activation cache - regenerate with src/02_extract_activations.py (26s)
+activations/
+
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

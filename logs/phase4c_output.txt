@@ -1,0 +1,31 @@
+metric imported from 04b unchanged: 19 refusal patterns
+prompts: 100 (all categories)
+
+coefficient 1.0 norms = 6.70 raw; max_new_tokens=80; greedy
+  unsteered            refusals   4/100 (4%)
+  probe_lr@+1          refusals  35/100 (35%)
+  random_control@+1    refusals  22/100 (22%)
+
+================================================================================================
+PRE-SPECIFIED TEST RESULTS (n=100 prompts per condition)
+================================================================================================
+           condition    refusal |        coding  controversia  creative_wri          math  system_secur
+------------------------------------------------------------------------------------------------
+           unsteered    4/100   4% |           0%           15%            0%            0%            5% 
+         probe_lr@+1   35/100  35% |          25%           45%           25%           20%           60% 
+   random_control@+1   22/100  22% |          30%           30%            0%           15%           35% 
+------------------------------------------------------------------------------------------------
+
+probe_lr@+1 vs random_control@+1 : 35/100 vs 22/100, Fisher exact two-sided p = 0.0596
+probe_lr@+1 vs unsteered         : 35/100 vs 4/100, Fisher exact two-sided p = 0.0000
+
+prediction was probe > random. Result: NOT SUPPORTED
+  -> the refusal shift seen in 04b is not attributable to the probe direction
+     specifically; a random vector of the same norm does comparable work.
+
+refusal rate split by the framing of the prompt itself:
+  unsteered            eval-framed 6%  deployment-framed 2%
+  probe_lr@+1          eval-framed 36%  deployment-framed 34%
+  random_control@+1    eval-framed 22%  deployment-framed 22%
+
+wrote results/phase4_refusal_replication.json and logs/phase4c_generations.txt
